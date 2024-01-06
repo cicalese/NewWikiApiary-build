@@ -1,0 +1,1 @@
+('Admin', BotPassword('mybot', 'changeme'))

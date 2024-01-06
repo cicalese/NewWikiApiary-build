@@ -3,11 +3,6 @@
 Set the following environment variables:
 - WIKIAPIARY_DB_USERNAME
 - WIKIAPIARY_DB_PASSWORD
-- WIKIAPIARY_DB_HOST
-- WIKIAPIARY_DB_PORT
-- WIKIAPIARY_DB_SCHEMA
-- WIKIAPIARY_USERNAME
-- WIKIAPIARY_URL
 
 From the directory containing these files, run:
 
@@ -23,7 +18,7 @@ ${BUILD_DIR}/create.sh
 cd wikiapiary
 ```
 
-Log in to the wiki using the username specified by `WIKIAPIARY_USERNAME`. Navigate to Special:BotPasswords and create a bot password for `mybot`. Copy the password.
+Log in to the wiki as Admin. Navigate to Special:BotPasswords and create a bot password for `mybot`. Copy the password.
 
 Copy `${BUILD_DIR}/files/user-password.py` to the `extensions/NewWikiApiary/scripts` directory. Edit `extensions/NewWikiApiary/scripts/user-password.py` and set the password copied above. 
 

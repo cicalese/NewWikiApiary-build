@@ -1,15 +1,8 @@
 services:
   web:
-    image: canasta:latest
-    volumes:
-      - ${BUILD_DIR}/resources/WikiApiary_Bee.png:/var/www/mediawiki/w/resources/assets/WikiApiary_Bee.png
-      - ${BUILD_DIR}/resources/favicon.ico:/var/www/mediawiki/w/resources/assets/favicon.ico
-      - ${BUILD_DIR}/resources/Monitored_by_WikiApiary.png:/var/www/mediawiki/w/resources/assets/Monitored_by_WikiApiary.png
-      - ${BUILD_DIR}/resources/wmf-cloud.png:/var/www/mediawiki/w/resources/assets/wmf-cloud.png
+    image: canasta-w8y:1.0
   scripts:
-    image: scripts:latest
-    build:
-      context: ${BUILD_DIR}/scripts_image
+    image: scripts-w8y:1.0
     restart: unless-stopped
     environment:
       - WIKIAPIARY_DB_USERNAME=${WIKIAPIARY_DB_USERNAME}

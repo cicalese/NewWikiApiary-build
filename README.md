@@ -1,10 +1,31 @@
 # Instructions for building the WikiApiary environment
 
+Download the version of Canasta that this site will depend on. From that
+directory, run:
+
+```
+sudo docker build . -t canasta:dev
+```
+
+Change directory to the `canasta-w8y-image` subdirectory of the build directory.
+Run:
+
+```
+sudo docker build . -t canasta-w8y:1.0
+```
+
+Change directory to the `scripts-w8y-image` subdirectory of the build directory.
+Run:
+
+```
+sudo docker build . -t scripts-w8y:1.0
+```
+
 Set the following environment variables:
 - WIKIAPIARY_DB_USERNAME
 - WIKIAPIARY_DB_PASSWORD
 
-From the directory containing these files, run:
+Change directory to the build directory. Run:
 
 ```
 export BUILD_DIR=`pwd`

@@ -1,4 +1,7 @@
 services:
+  db:
+    volumes:
+      - /srv/db/wikiapiary/mysql:/var/lib/mysql
   web:
     image: canasta-w8y:1.0
   scripts:

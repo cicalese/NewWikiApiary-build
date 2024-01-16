@@ -1,22 +1,11 @@
 services:
   db:
+    ports:
+      - 3306:3306
     volumes:
       - /srv/db/wikiapiary/mysql:/var/lib/mysql
   web:
     image: canasta-w8y:1.0
-  scripts:
-    image: scripts-w8y:1.0
-    restart: unless-stopped
-    environment:
-      - WIKIAPIARY_DB_USERNAME=${WIKIAPIARY_DB_USERNAME}
-      - WIKIAPIARY_DB_PASSWORD=${WIKIAPIARY_DB_PASSWORD}
-      - WIKIAPIARY_DB_HOST=db
-      - WIKIAPIARY_DB_PORT=3306
-      - WIKIAPIARY_DB_SCHEMA=Wikiapiary
-      - WIKIAPIARY_USERNAME=Admin
-      - WIKIAPIARY_URL=https://wikiapiary.wmcloud.org
-    volumes:
-      - ./extensions:/root/extensions
   caddy:
     image: alpine:latest
     restart: "no" 

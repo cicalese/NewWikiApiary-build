@@ -1,0 +1,7 @@
+export WIKIAPIARY_DB_USERNAME=wikiuser
+export WIKIAPIARY_DB_PASSWORD=changeme
+export WIKIAPIARY_DB_HOST=db
+export WIKIAPIARY_DB_PORT=3306
+export WIKIAPIARY_DB_SCHEMA=Wikiapiary
+export WIKIAPIARY_USERNAME=Admin
+export WIKIAPIARY_URL=https://wikiapiary.wmcloud.org
